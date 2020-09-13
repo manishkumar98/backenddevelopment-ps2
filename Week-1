@@ -1,0 +1,2 @@
+Create express app and perform simple CRUD operations such as 
+add user details,get user details,delete user  and update user details from Mongo DB .
