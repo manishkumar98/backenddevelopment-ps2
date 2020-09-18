@@ -41,7 +41,11 @@ router.post('/', async(req,res) => {
 
 router.patch('/:id',async(req,res)=> {
     try{
-        const alien = await Alien.findById(req.params.id) 
+        const alien = await Alien.findById(req.params.id)
+        alien.name=req.body.name,
+        alien.collegeid=req.body.collegeid,
+        alien.branch=req.body.branch,
+        alien.tech=req.body.tech, 
         alien.sub = req.body.sub
         const a1 = await alien.save()
         res.json(a1)   
